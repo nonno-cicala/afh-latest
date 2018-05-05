@@ -1,0 +1,18 @@
+table {
+    margin: auto;
+    border: 2px solid;
+    padding: 8px;
+}
+
+tbody {
+    color: black;
+    background-color: aliceblue;
+}
+
+td {
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: lightsteelblue;
+}
