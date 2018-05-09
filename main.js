@@ -4,8 +4,14 @@ var remainingFlids;
 var files = [];
 
 request.responseType = 'json';
+
+// tuna
 //request.open("GET","https://androidfilehost.com/api/?action=developers&did=2&limit=6");
 request.open("GET", "http://afh.it/remote/?action=developers&did=2");
+
+// onyx
+//request.open("GET", "http://afh.it/remote/?action=developers&did=575");
+
 request.send();
 
 request.onload = function () {
