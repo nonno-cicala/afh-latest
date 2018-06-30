@@ -1,7 +1,7 @@
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 
-var remainingFlids;
-var files = [];
+let remainingFlids;
+let files = [];
 
 request.responseType = 'json';
 
@@ -24,7 +24,7 @@ request.onload = function () {
 }
 
 function flidFiles(flid) {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
     xhr.open('GET', 'http://afh.it/remote/?action=folder&flid=' + flid);
     xhr.send(null);
@@ -45,7 +45,7 @@ function flidFiles(flid) {
         --remainingFlids;
         if (remainingFlids === 0) {
             files.sort((a, b) => b.upload_date - a.upload_date);
-            var table = document.querySelector('tbody');
+            let table = document.querySelector('tbody');
             files.slice(0, 50).forEach(fid => {
                 let row = table.insertRow();
                 let cell = row.insertCell();
